@@ -1,0 +1,540 @@
+\hypertarget{class_imagen}{}\doxysection{Imagen Class Reference}
+\label{class_imagen}\index{Imagen@{Imagen}}
+
+
+T.\+D.\+A Imágenes.  
+
+
+
+
+{\ttfamily \#include $<$Imagen.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_imagen_ab2e649aa7a105155c7bfdb846abf0528}{Imagen}} ()
+\begin{DoxyCompactList}\small\item\em Constructor sin parámetros para inicializar los valores a 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_imagen_a3a70f3de37670879de648c5ed38dc79a}{Imagen}} (const char $\ast$nombre)
+\begin{DoxyCompactList}\small\item\em Leemos datos de entrada desde el nombre de un archivo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_imagen_a46f9fbbfd928f81c2f37947cde05d73c}{Imagen}} (const \mbox{\hyperlink{class_imagen}{Imagen}} \&otro)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_imagen_abf3c5ff5ac1689ff283c059cf4218d00}{Imagen}} (int nf, int nc)
+\begin{DoxyCompactList}\small\item\em Constructor con parámetros para inicializar los valores a 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_imagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}{$\sim$\+Imagen}} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase, para liberar la memoria almacenada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a55d0f4159f87c1ca561c65fe680787e5}{set\+File}} (const char $\ast$nombre)
+\begin{DoxyCompactList}\small\item\em Cambiamos el archivo sobre el que trabajamos y volvemos a leer los datos. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_imagen_a960a3149e807046e8322ba63ca4a0590}{num\+\_\+filas}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el número de filas utilizados. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_imagen_a23892f0439f2749b0cb8b9f49fa4cccc}{num\+\_\+columnas}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el número de columnas utilizadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a43ceed99fb37f036a469c78dcc04e2da}{asigna\+\_\+pixel}} (int nf, int nc, byte valor)
+\begin{DoxyCompactList}\small\item\em Asignar el valor \char`\"{}valor\char`\"{} al pixel (\char`\"{}nf,nc\char`\"{}) de la imagen. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_imagen_a17d2fbf8bf79c07a1ada90a72c1ab7ef}{valor\+\_\+pixel}} (int nf, int nc)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor de la matriz en una posición dada. \end{DoxyCompactList}\item 
+Tipo\+Imagen \mbox{\hyperlink{class_imagen_ab3bf2cd733dfe754a3009dae1625351d}{get\+\_\+tipo}} ()
+\begin{DoxyCompactList}\small\item\em Nos indica sobre que tipo de imagen trabajamos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_imagen_a231025241d90d97e059ff699be92a5ae}{Escribir\+Imagen}} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Funcion auxiliar para llamar a la funcion de escritura adecuada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_imagen_a3c49676134aee7730382b83217ed16f4}{Escribir\+Imagen\+P\+PM}} (const char $\ast$nombre)
+\begin{DoxyCompactList}\small\item\em Escribe una imagen de tipo P\+PM. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_imagen_a10fb088cd3705109a2471e3840edc41e}{Escribir\+Imagen\+P\+GM}} (const char $\ast$nombre)
+\begin{DoxyCompactList}\small\item\em Escribe una imagen de tipo P\+GM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a60d4e40cf6f3e163b6d93df7d0e9ce5f}{Enmarcar}} (int width=1, int R=0, int G=0, int B=0)
+\begin{DoxyCompactList}\small\item\em Añadimos una línea de color \char`\"{}valor\char`\"{} alrededor de la imagen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_ae15c7da504d0a6468521bedcc2124b6a}{Negativo}} ()
+\begin{DoxyCompactList}\small\item\em Debemos restar al valor máximo aquel valor en cada posición de nuestra matriz de valores de imagen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_imagen_ae2786176e78ed81ddaa8cbeba6f081eb}{Convert\+To\+\_\+\+Gray}} ()
+\begin{DoxyCompactList}\small\item\em Debemos superponer los valores R\+GB ( tuplas ) cada cual con su constante para tener como resultado una imagen de tipo P\+GM ( en escala de grises ). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_aca34c033e2e1b7601e13bfc65e468ad3}{Escala\+Valores}} (int T1, int T2)
+\begin{DoxyCompactList}\small\item\em Debemos reajustar los valores de la imagen para que esté contenido entre los intervalos T1 y T2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_ae9d1326f3f0ce677cc3a3ffc765cd84a}{Escala\+Automatica}} ()
+\begin{DoxyCompactList}\small\item\em Si la imagen tiene un nivel de gris menor que nuestro umbral (o al revés si se prefiere) se deja el valor y en caso contrario se pone a 0 ( o a maxvalue);. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_imagen_aa85e30ff9aace2f384d488c4eb5e92c8}{Zoom}} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em creamos una matriz cuadrada de dimensiones 2N-\/1 mediante interpolación de columnas y luego interpolación de columnas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a57b59c6cff2a35f2d230be6c6b198401}{Reducir\+PorN}} (int nf, int nc=0)
+\begin{DoxyCompactList}\small\item\em Debemos hacer una reducción de tamaño n sobre nuestras imagenes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_aa1ddb00883a717a14d07587af45bc6e7}{ReducirA}} (int size\+Row, int size\+Col=0)
+\begin{DoxyCompactList}\small\item\em Reducimos a un tamaño de pixel dado, hacemos uso de Reducir\+PorN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a7a2e4e37e9ae2c608b0098bc7060b210}{Linear\+Contrast}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Aplicamos una transformación lineal sobre los valores de la imagen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_imagen_ad75d85fe0a7f2c23a7ee82647b774d76}{Morphing}} (\mbox{\hyperlink{class_imagen}{Imagen}} \&otro, string nombre, int n\+\_\+iter)
+\begin{DoxyCompactList}\small\item\em Debemos ir transformando linealmente los valores durante n\+\_\+iter iteraciones aplicando para ello la fórmula (1-\/x)origen + x\+Destino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a03e3621a4a737a8ada8049dc894db27a}{Codificar}} (string msg)
+\begin{DoxyCompactList}\small\item\em Cambiamos el último bit de cada byte para que sea los bits de cada byte del mensaje que enviamos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_imagen_a6881eb77ca932573c54bcb67ab6b8d7d}{Decodificar}} (string \&msg)
+\begin{DoxyCompactList}\small\item\em Leyemos los últimos bits de cada byte para ir formulando nuestro mensaje codificado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T.\+D.\+A Imágenes. 
+
+Una instance {\itshape c} del tipo de datos abstracto {\ttfamily \mbox{\hyperlink{class_imagen}{Imagen}}} es una representación de un conjunto de números en forma matricial que puede ser interpretado.
+
+Lo representamos mediante un número dado de filas (nf) y número dado de columnas (nc). Además, es necesario especificar el valor de alcance máximo (max $\sim$ 255).
+
+Para el caso de las imágenes con colores ( R\+GB ) tenemos que tener en cuenta que los valores son tuplas de 0-\/max.
+
+Se especifica el tipo de \mbox{\hyperlink{class_imagen}{Imagen}} ( P\+GM or P\+PM ) según la cabecera del archivo, es decir, P5 o P6 respectivamente. \begin{DoxySeeAlso}{See also}
+Tipo\+Imagen
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Brian Sena Simions 2º\+B-\/\+B2. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Change when finished. 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_imagen_ab2e649aa7a105155c7bfdb846abf0528}\label{class_imagen_ab2e649aa7a105155c7bfdb846abf0528}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor sin parámetros para inicializar los valores a 0. 
+
+\begin{DoxyReturn}{Returns}
+La instancia inicializada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a3a70f3de37670879de648c5ed38dc79a}\label{class_imagen_a3a70f3de37670879de648c5ed38dc79a}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Leemos datos de entrada desde el nombre de un archivo. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_imagen_a55d0f4159f87c1ca561c65fe680787e5}{set\+File()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Nombre del archivo que vamos a utilizar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a46f9fbbfd928f81c2f37947cde05d73c}\label{class_imagen_a46f9fbbfd928f81c2f37947cde05d73c}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_imagen}{Imagen}} \&}]{otro }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro} & \mbox{\hyperlink{class_imagen}{Imagen}} a copiar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La instancia inicializada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_abf3c5ff5ac1689ff283c059cf4218d00}\label{class_imagen_abf3c5ff5ac1689ff283c059cf4218d00}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Imagen()}{Imagen()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{int}]{nf,  }\item[{int}]{nc }\end{DoxyParamCaption})}
+
+
+
+Constructor con parámetros para inicializar los valores a 0. 
+
+\begin{DoxyPrecond}{Precondition}
+nf y nc deben ser valores positivos. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em nf} & Indica el número de filas de la matriz. \\
+\hline
+{\em nc} & Indica el número de columnas de la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la instancia inicializada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}\label{class_imagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}} 
+\index{Imagen@{Imagen}!````~Imagen@{$\sim$Imagen}}
+\index{````~Imagen@{$\sim$Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{$\sim$Imagen()}{~Imagen()}}
+{\footnotesize\ttfamily Imagen\+::$\sim$\+Imagen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de la clase, para liberar la memoria almacenada. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_imagen_a43ceed99fb37f036a469c78dcc04e2da}\label{class_imagen_a43ceed99fb37f036a469c78dcc04e2da}} 
+\index{Imagen@{Imagen}!asigna\_pixel@{asigna\_pixel}}
+\index{asigna\_pixel@{asigna\_pixel}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{asigna\_pixel()}{asigna\_pixel()}}
+{\footnotesize\ttfamily void Imagen\+::asigna\+\_\+pixel (\begin{DoxyParamCaption}\item[{int}]{nf,  }\item[{int}]{nc,  }\item[{byte}]{valor }\end{DoxyParamCaption})}
+
+
+
+Asignar el valor \char`\"{}valor\char`\"{} al pixel (\char`\"{}nf,nc\char`\"{}) de la imagen. 
+
+\begin{DoxyPrecond}{Precondition}
+nf y nc deben ser valores positivos y menores que el tamaño de la matriz bidimensional. PD\+:(Esta función no funcionaría para los tipos de colores si no escribimos tuplas de datos). 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em nf} & Fila a escribir. \\
+\hline
+{\em nc} & Columna a escribir. \\
+\hline
+{\em valor} & Nuevo valor de la posición dada. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a03e3621a4a737a8ada8049dc894db27a}\label{class_imagen_a03e3621a4a737a8ada8049dc894db27a}} 
+\index{Imagen@{Imagen}!Codificar@{Codificar}}
+\index{Codificar@{Codificar}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Codificar()}{Codificar()}}
+{\footnotesize\ttfamily void Imagen\+::\+Codificar (\begin{DoxyParamCaption}\item[{string}]{msg }\end{DoxyParamCaption})}
+
+
+
+Cambiamos el último bit de cada byte para que sea los bits de cada byte del mensaje que enviamos. 
+
+Utilizamos operaciones booleanas. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Mensaje a codificar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_ae2786176e78ed81ddaa8cbeba6f081eb}\label{class_imagen_ae2786176e78ed81ddaa8cbeba6f081eb}} 
+\index{Imagen@{Imagen}!ConvertTo\_Gray@{ConvertTo\_Gray}}
+\index{ConvertTo\_Gray@{ConvertTo\_Gray}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{ConvertTo\_Gray()}{ConvertTo\_Gray()}}
+{\footnotesize\ttfamily bool Imagen\+::\+Convert\+To\+\_\+\+Gray (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Debemos superponer los valores R\+GB ( tuplas ) cada cual con su constante para tener como resultado una imagen de tipo P\+GM ( en escala de grises ). 
+
+\begin{DoxyNote}{Note}
+const R = 0.\+2989, const G = 0.\+579 and const B = 0.\+114; Tal que la suma entre esos valores es menor o igual a 255 ( valor máximo ). 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+succeso / error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a6881eb77ca932573c54bcb67ab6b8d7d}\label{class_imagen_a6881eb77ca932573c54bcb67ab6b8d7d}} 
+\index{Imagen@{Imagen}!Decodificar@{Decodificar}}
+\index{Decodificar@{Decodificar}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Decodificar()}{Decodificar()}}
+{\footnotesize\ttfamily void Imagen\+::\+Decodificar (\begin{DoxyParamCaption}\item[{string \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Leyemos los últimos bits de cada byte para ir formulando nuestro mensaje codificado. 
+
+Utilizamos operaciones booleanas. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & String donde almacenaremos el resultado de la decodificación \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a60d4e40cf6f3e163b6d93df7d0e9ce5f}\label{class_imagen_a60d4e40cf6f3e163b6d93df7d0e9ce5f}} 
+\index{Imagen@{Imagen}!Enmarcar@{Enmarcar}}
+\index{Enmarcar@{Enmarcar}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Enmarcar()}{Enmarcar()}}
+{\footnotesize\ttfamily void Imagen\+::\+Enmarcar (\begin{DoxyParamCaption}\item[{int}]{width = {\ttfamily 1},  }\item[{int}]{R = {\ttfamily 0},  }\item[{int}]{G = {\ttfamily 0},  }\item[{int}]{B = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Añadimos una línea de color \char`\"{}valor\char`\"{} alrededor de la imagen. 
+
+\begin{DoxyNote}{Note}
+Todos tienen valor por defecto 0, en caso de que no se especifiquen los paramétros 2,3 entonces aplicamos solo el primero como intensidad de gris en las imagenes .P\+GM 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em width} & grosor del enmarcamiento \\
+\hline
+{\em R} & cantidad de rojo del enmarcamiento \\
+\hline
+{\em B} & cantidad de azul del enmarcamiento \\
+\hline
+{\em G} & cantidad de verde del enmarcamiento \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_ae9d1326f3f0ce677cc3a3ffc765cd84a}\label{class_imagen_ae9d1326f3f0ce677cc3a3ffc765cd84a}} 
+\index{Imagen@{Imagen}!EscalaAutomatica@{EscalaAutomatica}}
+\index{EscalaAutomatica@{EscalaAutomatica}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{EscalaAutomatica()}{EscalaAutomatica()}}
+{\footnotesize\ttfamily void Imagen\+::\+Escala\+Automatica (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Si la imagen tiene un nivel de gris menor que nuestro umbral (o al revés si se prefiere) se deja el valor y en caso contrario se pone a 0 ( o a maxvalue);. 
+
+\begin{DoxyNote}{Note}
+Calculamos un Umbral T1 con el valor medio de una \mbox{\hyperlink{class_imagen}{Imagen}}. Luego creamos dos Imagenes, una con valores inferiores y otra con valores superiores. Volvemos a calcular la media de ambas y el nuevo valor de T1 es la media de las medias. Ejecutamos este algoritmo recursivamente hasta que T(t+1)-\/T(t) $<$= epsilon. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+medium\+Value() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_imagen_aca34c033e2e1b7601e13bfc65e468ad3}\label{class_imagen_aca34c033e2e1b7601e13bfc65e468ad3}} 
+\index{Imagen@{Imagen}!EscalaValores@{EscalaValores}}
+\index{EscalaValores@{EscalaValores}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{EscalaValores()}{EscalaValores()}}
+{\footnotesize\ttfamily void Imagen\+::\+Escala\+Valores (\begin{DoxyParamCaption}\item[{int}]{T1,  }\item[{int}]{T2 }\end{DoxyParamCaption})}
+
+
+
+Debemos reajustar los valores de la imagen para que esté contenido entre los intervalos T1 y T2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T1} & Extremo inferior \\
+\hline
+{\em T2} & Extremo superior \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a231025241d90d97e059ff699be92a5ae}\label{class_imagen_a231025241d90d97e059ff699be92a5ae}} 
+\index{Imagen@{Imagen}!EscribirImagen@{EscribirImagen}}
+\index{EscribirImagen@{EscribirImagen}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{EscribirImagen()}{EscribirImagen()}}
+{\footnotesize\ttfamily bool Imagen\+::\+Escribir\+Imagen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Funcion auxiliar para llamar a la funcion de escritura adecuada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Lugar/nombre de donde se guarda la imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+succeso / error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a10fb088cd3705109a2471e3840edc41e}\label{class_imagen_a10fb088cd3705109a2471e3840edc41e}} 
+\index{Imagen@{Imagen}!EscribirImagenPGM@{EscribirImagenPGM}}
+\index{EscribirImagenPGM@{EscribirImagenPGM}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{EscribirImagenPGM()}{EscribirImagenPGM()}}
+{\footnotesize\ttfamily bool Imagen\+::\+Escribir\+Imagen\+P\+GM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Escribe una imagen de tipo P\+GM. 
+
+\begin{DoxyReturn}{Returns}
+Si ha tenido éxito en la escritura. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a3c49676134aee7730382b83217ed16f4}\label{class_imagen_a3c49676134aee7730382b83217ed16f4}} 
+\index{Imagen@{Imagen}!EscribirImagenPPM@{EscribirImagenPPM}}
+\index{EscribirImagenPPM@{EscribirImagenPPM}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{EscribirImagenPPM()}{EscribirImagenPPM()}}
+{\footnotesize\ttfamily bool Imagen\+::\+Escribir\+Imagen\+P\+PM (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Escribe una imagen de tipo P\+PM. 
+
+\begin{DoxyReturn}{Returns}
+Si ha tenido éxito en la escritura. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_ab3bf2cd733dfe754a3009dae1625351d}\label{class_imagen_ab3bf2cd733dfe754a3009dae1625351d}} 
+\index{Imagen@{Imagen}!get\_tipo@{get\_tipo}}
+\index{get\_tipo@{get\_tipo}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{get\_tipo()}{get\_tipo()}}
+{\footnotesize\ttfamily Tipo\+Imagen Imagen\+::get\+\_\+tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nos indica sobre que tipo de imagen trabajamos. 
+
+\begin{DoxyReturn}{Returns}
+Tipo\+Imagen Tipo de imagen sobre el que trabajamos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a7a2e4e37e9ae2c608b0098bc7060b210}\label{class_imagen_a7a2e4e37e9ae2c608b0098bc7060b210}} 
+\index{Imagen@{Imagen}!LinearContrast@{LinearContrast}}
+\index{LinearContrast@{LinearContrast}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{LinearContrast()}{LinearContrast()}}
+{\footnotesize\ttfamily void Imagen\+::\+Linear\+Contrast (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Aplicamos una transformación lineal sobre los valores de la imagen. 
+
+\begin{DoxyNote}{Note}
+t(z) = min + ((max-\/min)/(b-\/a))$\ast$(z-\/a); Donde a y b son los valores máx y min de la imagen actual. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Nuevo minimo de la imagen \\
+\hline
+{\em max} & Nuevo maximo de la imagen \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_ad75d85fe0a7f2c23a7ee82647b774d76}\label{class_imagen_ad75d85fe0a7f2c23a7ee82647b774d76}} 
+\index{Imagen@{Imagen}!Morphing@{Morphing}}
+\index{Morphing@{Morphing}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Morphing()}{Morphing()}}
+{\footnotesize\ttfamily bool Imagen\+::\+Morphing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_imagen}{Imagen}} \&}]{otro,  }\item[{string}]{nombre,  }\item[{int}]{n\+\_\+iter }\end{DoxyParamCaption})}
+
+
+
+Debemos ir transformando linealmente los valores durante n\+\_\+iter iteraciones aplicando para ello la fórmula (1-\/x)origen + x\+Destino. 
+
+Utilizamos string para poder ir mmodificando el nombre de la imagen de salida cada paso. 
+\begin{DoxyParams}{Parameters}
+{\em otro} & \mbox{\hyperlink{class_imagen}{Imagen}} Destino. \\
+\hline
+{\em nombre} & \\
+\hline
+{\em n\+\_\+iter} & Número de Iteraciones . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+succeso / error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_ae15c7da504d0a6468521bedcc2124b6a}\label{class_imagen_ae15c7da504d0a6468521bedcc2124b6a}} 
+\index{Imagen@{Imagen}!Negativo@{Negativo}}
+\index{Negativo@{Negativo}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Negativo()}{Negativo()}}
+{\footnotesize\ttfamily void Imagen\+::\+Negativo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Debemos restar al valor máximo aquel valor en cada posición de nuestra matriz de valores de imagen. 
+
+( Max -\/ valor ). \mbox{\Hypertarget{class_imagen_a23892f0439f2749b0cb8b9f49fa4cccc}\label{class_imagen_a23892f0439f2749b0cb8b9f49fa4cccc}} 
+\index{Imagen@{Imagen}!num\_columnas@{num\_columnas}}
+\index{num\_columnas@{num\_columnas}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{num\_columnas()}{num\_columnas()}}
+{\footnotesize\ttfamily const int Imagen\+::num\+\_\+columnas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el número de columnas utilizadas. 
+
+( Devuelve el nº de columnas, no el nº de valores ( Tuplas en P\+PM ) ) \begin{DoxyReturn}{Returns}
+Número de columnas en uso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_a960a3149e807046e8322ba63ca4a0590}\label{class_imagen_a960a3149e807046e8322ba63ca4a0590}} 
+\index{Imagen@{Imagen}!num\_filas@{num\_filas}}
+\index{num\_filas@{num\_filas}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{num\_filas()}{num\_filas()}}
+{\footnotesize\ttfamily const int Imagen\+::num\+\_\+filas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el número de filas utilizados. 
+
+\begin{DoxyReturn}{Returns}
+Número de filas en uso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_aa1ddb00883a717a14d07587af45bc6e7}\label{class_imagen_aa1ddb00883a717a14d07587af45bc6e7}} 
+\index{Imagen@{Imagen}!ReducirA@{ReducirA}}
+\index{ReducirA@{ReducirA}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{ReducirA()}{ReducirA()}}
+{\footnotesize\ttfamily void Imagen\+::\+ReducirA (\begin{DoxyParamCaption}\item[{int}]{size\+Row,  }\item[{int}]{size\+Col = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Reducimos a un tamaño de pixel dado, hacemos uso de Reducir\+PorN. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_imagen_a57b59c6cff2a35f2d230be6c6b198401}{Reducir\+Por\+N()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em size\+Row} & Número de filas de la imagen resultante. \\
+\hline
+{\em size\+Col} & Número de columnas de la imagen resultante. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a57b59c6cff2a35f2d230be6c6b198401}\label{class_imagen_a57b59c6cff2a35f2d230be6c6b198401}} 
+\index{Imagen@{Imagen}!ReducirPorN@{ReducirPorN}}
+\index{ReducirPorN@{ReducirPorN}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{ReducirPorN()}{ReducirPorN()}}
+{\footnotesize\ttfamily void Imagen\+::\+Reducir\+PorN (\begin{DoxyParamCaption}\item[{int}]{nf,  }\item[{int}]{nc = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Debemos hacer una reducción de tamaño n sobre nuestras imagenes. 
+
+Para ello calculamos la media de n valores sumados, para todos los valores. \begin{DoxyNote}{Note}
+Debemos tener cuidado con el overflow de los bytes, ya que max = 255. Para ello utilizamos un arr de $<$int$>$ que luego convertimos en $<$byte$>$ tras realizar la media de los valores sumados. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Tamaño de la reducción \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a55d0f4159f87c1ca561c65fe680787e5}\label{class_imagen_a55d0f4159f87c1ca561c65fe680787e5}} 
+\index{Imagen@{Imagen}!setFile@{setFile}}
+\index{setFile@{setFile}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{setFile()}{setFile()}}
+{\footnotesize\ttfamily void Imagen\+::set\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Cambiamos el archivo sobre el que trabajamos y volvemos a leer los datos. 
+
+\begin{DoxySeeAlso}{See also}
+Leer\+Cabecera(), Leer\+Imagen\+P\+P\+M(), Leer\+Tipo() 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Nombre del archivo que vamos a utilizar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_imagen_a17d2fbf8bf79c07a1ada90a72c1ab7ef}\label{class_imagen_a17d2fbf8bf79c07a1ada90a72c1ab7ef}} 
+\index{Imagen@{Imagen}!valor\_pixel@{valor\_pixel}}
+\index{valor\_pixel@{valor\_pixel}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{valor\_pixel()}{valor\_pixel()}}
+{\footnotesize\ttfamily byte Imagen\+::valor\+\_\+pixel (\begin{DoxyParamCaption}\item[{int}]{nf,  }\item[{int}]{nc }\end{DoxyParamCaption})}
+
+
+
+Devuelve el valor de la matriz en una posición dada. 
+
+\begin{DoxyPrecond}{Precondition}
+nf y nc deben ser valores positivos y menores que el tamaño de la matriz bidimensional. Además, no se modifica ningún valor. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em nf} & Fila a leer. \\
+\hline
+{\em nc} & Columna a leer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valor en la posición dada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_imagen_aa85e30ff9aace2f384d488c4eb5e92c8}\label{class_imagen_aa85e30ff9aace2f384d488c4eb5e92c8}} 
+\index{Imagen@{Imagen}!Zoom@{Zoom}}
+\index{Zoom@{Zoom}!Imagen@{Imagen}}
+\doxysubsubsection{\texorpdfstring{Zoom()}{Zoom()}}
+{\footnotesize\ttfamily bool Imagen\+::\+Zoom (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+creamos una matriz cuadrada de dimensiones 2N-\/1 mediante interpolación de columnas y luego interpolación de columnas. 
+
+\begin{DoxyNote}{Note}
+Por interpolar entendemos que debemos calcular la media entre los valores y poner esta media entre ellos. Además, cabe recordar que en caso de las imagenes con colores tenemos que tener en cuenta un offset entre los respectivos colores de valor = 3. R G B R1 G1 B1....Rn Gn Bn. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Punto inicial del zoom respecto del eje de ordenadas \\
+\hline
+{\em y1} & Punto inicial del zoom respecto del eje de abcisas \\
+\hline
+{\em x2} & Punto final del zoom respecto del eje de ordenadas \\
+\hline
+{\em y2} & Punto final del zoom respecto del eje de abcisas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+succeso / error 
+\end{DoxyReturn}
